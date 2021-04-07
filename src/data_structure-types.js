@@ -14,14 +14,13 @@ const sum = (value1, value2) => {
   if (typeof value1 === 'number') {
     argNumber = value1;
     arg2 = parseInt(value2);
-  }
-  else {
+  } else {
     argNumber = value2;
     arg2 = parseInt(value1);
   }
 
-  if (argNumber % 5 === 0)
-    argNumber *= -1;
+  if (argNumber % 5 === 0 && argNumber % 3 === 0 && argNumber % 15 === 0)
+    argNumber = -1 * argNumber;
 
   return argNumber + arg2;
 };
